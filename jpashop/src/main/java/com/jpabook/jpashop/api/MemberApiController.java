@@ -23,7 +23,7 @@ public class MemberApiController {
     }
 
     @GetMapping("/api/v2/members")
-    public Result MemberV2 (){
+    public Result membersV2 (){
         List<Member> findMembers = memberService.findMembers();
         List<MemberDto> memberDto = findMembers.stream()
                 .map(m -> new MemberDto(m.getName()))
