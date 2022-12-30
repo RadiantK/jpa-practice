@@ -14,13 +14,12 @@ public class OrderQueryRepository {
 
     private final EntityManager em;
 
-
-
     public List<OrderQueryDto> findOrderQueryDtos() {
         List<OrderQueryDto> result = findOrders();
 
         result.forEach(o -> {
             List<OrderItemQueryDto> orderItems = findOrderItems(o.getOrderId());
+            o.setOrderItems(orderItems);
         });
 
         return result;
