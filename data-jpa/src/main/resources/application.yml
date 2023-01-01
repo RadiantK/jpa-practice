@@ -13,6 +13,12 @@ spring:
         #        show-sql: true # System.out 에 출력 되므로 로거에 출력될 수 있도록 아래 로깅 설정
         format_sql: true
 
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 2000
+
 logging:
   level:
     org.hibernate.SQL: debug
