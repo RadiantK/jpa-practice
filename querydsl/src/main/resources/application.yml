@@ -12,6 +12,7 @@ spring:
       hibernate:
         # show-sql: true # System.out 에 출력 되므로 로거에 출력될 수 있도록 아래 로깅 설정
         format_sql: true
+        use_sql_comments: true # jpql 출력
 
 logging:
   level:
